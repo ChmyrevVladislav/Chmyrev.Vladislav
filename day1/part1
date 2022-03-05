@@ -1,6 +1,6 @@
-f1 = open(input.txt', 'r')
+f1 = open('input.txt', 'r')
 text = f1.read()
-f2 = open(output1.txt', "w")
+f2 = open('output1.txt', "w")
 
 x = 0
 
