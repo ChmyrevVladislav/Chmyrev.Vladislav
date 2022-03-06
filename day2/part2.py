@@ -30,7 +30,3 @@ for i in range(0, len(a), 3):
 f2.write(str(lsum))
 f2.close()
 f1.close()
-    
-
-
-
