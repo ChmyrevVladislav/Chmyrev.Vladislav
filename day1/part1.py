@@ -14,3 +14,4 @@ for i in text:
     
 f2.write(str(x))
 f2.close()
+f1.close()
