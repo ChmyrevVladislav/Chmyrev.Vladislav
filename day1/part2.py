@@ -16,3 +16,5 @@ for i in text:
         f2.write(str(count))
         f2.close()
         break
+
+f1.close()
