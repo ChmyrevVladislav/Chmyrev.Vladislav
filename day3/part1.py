@@ -8,14 +8,14 @@ y = 0
 p = 1
 
 #Обычный санта
-for i in text:
-    if i == '^':
+for i in range (len(text)):
+    if text[i] == '^':
         x += 1
-    if i == 'v':
+    if text[i] == 'v':
         x -= 1
-    if i == '>':
+    if text[i] == '>':
         y += 1
-    if i == '<':
+    if text[i] == '<':
         y -= 1
     if [x,y] not in xy:
         p += 1
