@@ -17,7 +17,6 @@ counter1 = 0
 counter2 = 0
 
 for stroka in text:
-    #stroka = stroka.strip()
     counter1 += len(stroka)
     stroka = stroka[1:-1]
     if r'\\' in stroka:
