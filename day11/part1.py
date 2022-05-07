@@ -2,8 +2,6 @@ f1 = open("input.txt", "r")
 f2 = open("output1.txt", "w")
 text = f1.read()
 
-
-
 def increase_string(string):
     curr_index = len(string) - 1
     string = string[:curr_index] + chr(ord(string[curr_index]) + 1) + string[curr_index+1:]
@@ -12,8 +10,6 @@ def increase_string(string):
         curr_index -= 1
         string = string[:curr_index] + chr(ord(string[curr_index]) + 1) + string[curr_index+1:]
     return string
-
-
 
 def contains_three_increasing(string):
     prev = None
@@ -28,8 +24,6 @@ def contains_three_increasing(string):
         prev = char
     return False
 
-
-
 def contains_two_pairs(string):
     pairs = []
     prev = None
@@ -38,8 +32,6 @@ def contains_two_pairs(string):
             pairs.append(char)
         prev = char
     return len(pairs) >= 2
-
-
 
 def generate_new_password(stroka):
     valid = False
@@ -61,11 +53,7 @@ def generate_new_password(stroka):
             continue
     return stroka
 
-
-
 text = generate_new_password(text)
-
-
 
 f2.write(str(text))
 f2.close
