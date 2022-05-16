@@ -56,6 +56,6 @@ def generate_new_password(stroka):
 text = generate_new_password(text)
 text = generate_new_password(text)
 
-f2.write(str(a))
+f2.write(str(text))
 f2.close
 f1.close
