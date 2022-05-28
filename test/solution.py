@@ -1,6 +1,19 @@
 with open('input.txt', 'r') as INPUT:
+    INPUT1 = INPUT.readline()
     INPUT = INPUT.read()
     INPUT = INPUT.split()
+
+#Клятое создание поля XD
+n, m = map(int, INPUT1.split())
+field = []
+for a in range(n):
+    stroka = []
+    for b in range(m):
+        if INPUT[a][b] == '0':
+            stroka.append(False)
+        else:
+            stroka.append(True)
+    field.append(stroka)
     
 #Класс корабли который будет создавать (ну или запоминать) кораблики, их расположение и так же запускать счетчик кораблей такого типа.
 class Ship:
@@ -32,19 +45,12 @@ def get_ship(y, x):
         for j in range(x, x + dx):
             found[i][j] = True
 
-#Создание поля где будут кораблики в виде двумерного массива.
-n, m = map(int, input().split())
-field = [   
-    list(map(lambda x: True if x == "1" else False, list(input())))
-    for i in range(n)
-]
-
 #Создание вспомогательного поля, с помощью которого будем искать корабли (и отмечать на на поле ну и словаря где будем хранить кораблики и их число.
 found = [[False for j in range(m)] for i in range(n)]
 ships = dict()
 for yi in range(n):
     for xi in range(m):
-        if field[yi][xi] and not found[yi][xi]:
+        if field[yi][xi] and not found[yi-1][xi]:
             get_ship(yi, xi)
 
 f = open('output.txt', 'w')
