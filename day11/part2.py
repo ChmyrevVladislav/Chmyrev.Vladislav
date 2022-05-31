@@ -1,5 +1,5 @@
 f1 = open("input.txt", "r")
-f2 = open("output1.txt", "w")
+f2 = open("output2.txt", "w")
 text = f1.read()
 
 def increase_string(string):
